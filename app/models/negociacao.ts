@@ -9,19 +9,19 @@ export class Negociacao {
         this._valor = valor;
     }
 
-    get data() {
-        return this._data;
+    get data(): Date {
+        return new Date(this._data.getTime()); /* retorna uma copia da data, se retornasse a data ficaria desprotegido, pois daria para alterar a data original*/
     }
 
-    get quantidade() {
+    get quantidade(): number {
         return this._quantidade;
     }
 
-    get valor() {
+    get valor(): number {
         return this._valor;
     }
 
-    get volume() {
+    get volume(): number {
         return this._quantidade * this._valor;
     }
 }
